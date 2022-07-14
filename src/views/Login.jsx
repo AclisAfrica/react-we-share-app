@@ -1,32 +1,72 @@
-import React from 'react'
-import styled from'styled-components'
-import{ Box, Stack ,Input,Button} from '@chakra-ui/react'
+import {
+  Box,
+  Center,
+  Text,
+  Stack,
+  List,
+  ListItem,
+  ListIcon,
+  Button,
+  Input,
+  useColorModeValue,
+} from '@chakra-ui/react';
+import { CheckIcon,ViewIcon } from '@chakra-ui/icons';
+import '../App.css';
 
-const Login=()=>{
-    return(
-        <Container>
-            <Stack direction="column" spacing="50px">
- <Box className="Logo">
-      <img src={'images/Logo.png'}/>
-     </Box>
+export default function Pricing() {
+  return (
+    <Center py={6}>
+      <Box className="Card"
+        maxW={'390px'}
+        w={'full'}
+        bg={useColorModeValue('white', 'gray.800')}
+        boxShadow={'2xl'}
+        rounded={'md'}
+        overflow={'hidden'}>
 
-     <Box className="Body">
-<p>Log In</p>
-<Input placeholder="Username"/>
+        <Stack
+          textAlign={'center'}
+          p={6}
+          color={useColorModeValue('gray.800', 'white')}
+          align={'center'}>
+            <img src='images/Logo.png'/>
+          <Text className="login">
+          Login
+          </Text>
+       
+        </Stack>
 
-<Input placeholder="Password"/>
-<p>Forgot your password,Need to change your password ? Help?</p>
-     <Button bg='Blue' color="white" >Log In</Button>
+        <Box className="body" px={6} py={10} mb="15px">
+         <Box className="input">
 
-     </Box>
-            </Stack>
-   
-        </Container>
-    )
+               <Input  placeholder="Username" />
+
+                 <Input  placeholder="Password" />
+                 <Box className="eye">
+                    <ViewIcon verticalAlign="top"/>
+                    <p>show</p>
+                 </Box>
+                   
+
+        </Box>
+       
+          <Button
+            mt={10}
+            w={'full'}
+            bg={'blue.600'}
+            color={'white'}
+            rounded={'xl'}
+            boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
+            _hover={{
+              bg: 'blue.400',
+            }}
+            _focus={{
+              bg: 'blue.400',
+            }}>
+           Login
+          </Button>
+        </Box>
+      </Box>
+    </Center>
+  );
 }
-
-const Container= styled.div`
-
-
-`
-export default Login;
