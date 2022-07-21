@@ -9,11 +9,12 @@ import {
   Button,
   Input,
   useColorModeValue,
+  Link,
 } from '@chakra-ui/react';
 import { CheckIcon,ViewIcon } from '@chakra-ui/icons';
 import '../App.css';
 
-export default function Pricing() {
+export default function Login() {
   return (
     <Center py={6}>
       <Box className="Card"
@@ -43,7 +44,7 @@ export default function Pricing() {
 
                  <Input  placeholder="Password" />
                  <Box className="eye">
-                    <ViewIcon verticalAlign="top"/>
+                    <ViewIcon />
                     <p>show</p>
                  </Box>
                    
@@ -65,6 +66,11 @@ export default function Pricing() {
             }}>
            Login
           </Button>
+        </Box>
+        <Box className="reset_password">
+          <a href='#'>Forgot you password?</a>
+          <a href="#"> Need to change your password?</a>
+          <a href="#">Help?</a>
         </Box>
       </Box>
     </Center>

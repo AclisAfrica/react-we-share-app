@@ -4,12 +4,13 @@ import{
   Route,
 }from "react-router-dom";
 import Login from'./views/Login.jsx';
+import Home from'./views/Home.jsx';
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Login/>}/>
-
+        <Route path='/Login' element={<Login/>}/>
+  <Route path='/' element={<Home/>}/>
       </Routes>
     </Router>
   );

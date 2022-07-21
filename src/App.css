@@ -38,6 +38,7 @@
   left: 0px;
   top: 0px;
   border-radius: 20px;
+  width: 400px;
 }
 
 .login{
@@ -82,6 +83,98 @@
     top: -45px;
     left:-45px;
    
+}
+.eye p{
+  position:absolute;
+  top:-7px;
+  left:25px;
+}
+.reset-password{
+  width:50%;
+  
+}
+
+.reset_password a{
+    display: flex;
+      align-items: center;
+      justify-content: center;
+  margin:auto;
+  font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+
+
+}
+
+.timing img{
+  position:relative;
+  left:25px;
+width: 19px;
+  height: 19px;
+}
+
+.pick_up_input{
+  display:flex;
+  flex-direction:row;
+
+  height: 56px;
+  border-radius: 8px;
+    align-items: center;
+      padding: 0px;
+      padding-left: 15px;
+     
+}
+.pick_up_input img{
+position:relative;
+left:-285px;
+}
+.drop_off_input img{
+  position: relative;
+    left: -285px;
+}
+.drop_off_input{
+  display: flex;
+    flex-direction: row;
+  height: 56px;
+    border-radius: 8px;
+    align-items: center;
+    padding: 0px;
+    padding-left: 15px;
+}
+.from_input{
+  display: flex;
+    flex-direction: row;
+    height: 56px;
+    border-radius: 8px;
+    align-items: center;
+    padding: 0px;
+    padding-left: 15px;
+}
+.car_desc{
+  position :relative;
+  left :-45px;
+}
+.car_desc h5{
+color: #C4C4C4;
+width: 211.2px;
+  height: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 125%;
+  
+
+}
+.car_desc h3{
+width: 211.2px;
+  height: 16.17px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000000;
 }
 
 
