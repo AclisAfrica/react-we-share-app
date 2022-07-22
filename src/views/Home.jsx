@@ -127,7 +127,7 @@ export default function Home() {
             flex={1}
             fontSize={'sm'}
             
-            bg={'blue.600'}
+            bg={'blue.500'}
             color={'white'}
             boxShadow={
               '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
@@ -144,10 +144,10 @@ border-radius={'80px'}
 position="relative"
 top="40px"
             _hover={{
-              bg: 'blue.500',
+              bg: 'blue.400',
             }}
             _focus={{
-              bg: 'blue.500',
+              bg: 'blue.400',
             }}>
            Submit
           </Button>
