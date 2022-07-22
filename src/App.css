@@ -107,6 +107,17 @@
 
 
 }
+.timing{
+  display: flex;
+
+    align-items: center;
+    padding: 16px 0px;
+    gap:25px;
+    width: 342px;
+    height: 101px;
+    position: relative;
+    left:20px;
+}
 
 .timing img{
   position:relative;
@@ -127,12 +138,12 @@ width: 19px;
      
 }
 .pick_up_input img{
-position:relative;
-left:-285px;
+position:absolute;
+left:534px;
 }
 .drop_off_input img{
-  position: relative;
-    left: -285px;
+  position: absolute;
+    left: 534px;
 }
 .drop_off_input{
   display: flex;
@@ -153,30 +164,89 @@ left:-285px;
     padding-left: 15px;
 }
 .car_desc{
-  position :relative;
-  left :-45px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+  font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+        gap: 16px;
+        position :relative;
+        top:30px;
 }
 .car_desc h5{
 color: #C4C4C4;
 width: 211.2px;
   height: 15px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 125%;
-  
-
+font-size: 13px;
+position:relative;
+left:-75px;
 }
 .car_desc h3{
 width: 211.2px;
   height: 16.17px;
-  font-style: normal;
+  color: #000000;
+  font-size: 16px;
+  position: relative;
+    left: -45px;
+}
+.down_section{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    width: 342px;
+    height: 79.17px;
+    font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 125%;
+        position: relative;
+          top: 13px;
+          left: -129px;
+}
+.down_section h5{
+color: #C4C4C4;
+  width: 211.2px;
+  height: 15px;
+  font-size: 13px;
+ 
+ 
+}
+.down_section h3{
+  width: 211.2px;
+    height: 16.17px;
+    color: #000000;
+    font-size: 16px;
+    
+}
+.number_section {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+gap:16px;
+font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 125%;
-  color: #000000;
+  width: 342px;
+  height: 95px;
+  position :relative;
+  top:40px;
+  left:-35px;
 }
 
+.number_section h5{
+color: #C4C4C4;
+  width: 211.2px;
+  height: 15px;
+  font-size: 13px;
+  position: relative;
+  left: -85px;
+}
 
 @keyframes App-logo-spin {
   from {

@@ -1,11 +1,10 @@
 import {
-  
   Box,
   Center,
-  
   Stack,
   Button,
- 
+ Wrap,
+ WrapItem,
   Badge,
   useColorModeValue,
   Input,
@@ -18,7 +17,7 @@ export default function Home() {
     <Center py={6}>
       
       <Box className="Card"
-        maxW={'320px'}
+        maxW={'390px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}
@@ -67,23 +66,23 @@ export default function Home() {
         </Stack>
         <Stack direction="column">
         <Box className="pick_up_input">
-       <Input  placeholder="   Pick up" width="220px"  height="38px"/>
+       <Input  placeholder="   Pick up" width="260px"  height="38px"/>
        <Input placeholder="Date" width="90px" height="38px"/>
        <img src={'images/Stop.svg'}/>
        </Box>
        <Box className="drop_off_input">
-<Input  placeholder=" Drop-off" width="290px"height="38px"/>
+<Input  placeholder="   Drop-off" width="350px"height="38px"/>
 <img src='images/Map Pin Line.svg'/>
 </Box>
   <Box className="from_input">
-<Input  placeholder="  From " width="200px"/>
+<Input  placeholder="  From " width="260px"/>
 <Input placeholder="To" width="85px"  height="38px"/>
 </Box>
 </Stack>
 
 <Stack direction="row">
         <Box className="car_desc">
-          <h5> car model</h5>
+          <h5> Car model</h5>
           <h3>Toyota Yaris-2012</h3>
         </Box>
         <Box className="car_img">
@@ -91,34 +90,66 @@ export default function Home() {
         </Box>
         
 </Stack>
+<Stack>
+ <Box className="down_section">
+<h5> Licensed Plate</h5>
+          <h3>H xxxx DA</h3>
+          
+ </Box>
+ <Box className="number_section">
+<h5> Number of seats</h5>
+ <Wrap spacing={4} >
+    <WrapItem>
+      <Button colorScheme='gray'>1</Button>
+    </WrapItem>
+      <WrapItem>
+      <Button colorScheme='gray'>2</Button>
+    </WrapItem>
+      <WrapItem>
+      <Button colorScheme='blue'>3</Button>
+    </WrapItem>
+      <WrapItem>
+      <Button colorScheme='gray'>4</Button>
+    </WrapItem>
+    <WrapItem>
+      <Button colorScheme='gray'>5</Button>
+    </WrapItem>
+
+    </Wrap>
+ </Box>
+</Stack>
+
        
 
         <Stack mt={8} direction={'row'} spacing={4}>
+          
           <Button
             flex={1}
             fontSize={'sm'}
-            rounded={'full'}
-            _focus={{
-              bg: 'gray.200',
-            }}>
-            Message
-          </Button>
-          <Button
-            flex={1}
-            fontSize={'sm'}
-            rounded={'full'}
-            bg={'blue.400'}
+            
+            bg={'blue.600'}
             color={'white'}
             boxShadow={
               '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
             }
+        
+            display={ 'flex'}
+justify-content={'center'} 
+align-items={'center'} 
+padding= {'12px 16px'}
+
+width= {'294px'}
+height= {'56px'}
+border-radius={'80px'} 
+position="relative"
+top="40px"
             _hover={{
               bg: 'blue.500',
             }}
             _focus={{
               bg: 'blue.500',
             }}>
-            Follow
+           Submit
           </Button>
         </Stack>
       </Box>
