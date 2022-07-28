@@ -3,9 +3,6 @@ import {
   Center,
   Text,
   Stack,
-  List,
-  ListItem,
-  ListIcon,
   Button,
   Input,
   useColorModeValue,
@@ -23,13 +20,15 @@ export default function Login() {
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
         rounded={'md'}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        >
 
         <Stack
           textAlign={'center'}
           p={6}
           color={useColorModeValue('gray.800', 'white')}
-          align={'center'}>
+          align={'center'}
+          >
             <img src='images/Logo.png'/>
           <Text className="login">
           Login

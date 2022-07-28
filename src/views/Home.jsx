@@ -5,14 +5,17 @@ import {
   Button,
  Wrap,
  WrapItem,
-  Badge,
+  Text,
+Image,
   useColorModeValue,
-  Input,
- 
+
+  Select,
 } from '@chakra-ui/react';
+import { HamburgerIcon,PlusSquareIcon} from '@chakra-ui/icons'
 import '../App.css';
 
 export default function Home() {
+
   return (
     <Center py={6}>
       
@@ -25,77 +28,147 @@ export default function Home() {
         p={6}
         textAlign={'center'}>
 
-           <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
-            <Box className="timing " >
-          <Badge
-            px={2}
-            py={1}
-            bg={useColorModeValue('white.50', 'white.800')}
-            fontWeight={'400'}
-            >
-           <img src='images/Moon.png'/>
-           <h5>6:30-7:30</h5>
-           <Button colorScheme=''  variant='link'>
-    Morning
-  </Button>
-          </Badge>
-          <Badge
-            px={2}
-            py={1}
-            bg={useColorModeValue('white.50', 'white.800')}
-            fontWeight={'400'}>
-            <img src='images/sun.png'/>
-           <h5>12:30-14:30</h5>
-           <Button colorScheme='' variant='link'>
-    Afternoon
-  </Button>
-          </Badge>
-          <Badge
-            px={2}
-            py={1}
-            bg={useColorModeValue('white.50', 'white.800')}
-            fontWeight={'400'}
-           >
-                 <img src='images/sunset.svg'/>
-           <h5>17:30-18:30</h5>
-           <Button colorScheme='' variant='link'>
-    Evening 
-  </Button>
-          </Badge>
+           <Stack align={'center'} justify-content={'space-between'} direction={'row'} mt={6} gap="190px"  >
+            <Box className="user_profil " >
+         <Image src={'images/girl.png'}/>
+         <Text
+          width="60px" 
+height="30px" 
+fontStyle="normal" 
+fontWeight="400" 
+fontSize="20px" 
+lineHeight="155%" 
+textAlign="center" 
+color="#C4C4C4" 
+
+         >Jean</Text>
+          </Box>
+          <Box className="hamburger">
+<HamburgerIcon />
           </Box>
         </Stack>
-        <Stack direction="column">
-        <Box className="pick_up_input">
-       <Input  placeholder="   Pick up" width="260px"  height="38px"/>
-       <Input placeholder="Date" width="90px" height="38px"/>
-       <img src={'images/Stop.svg'}/>
-       </Box>
-       <Box className="drop_off_input">
-<Input  placeholder="   Drop-off" width="350px"height="38px"/>
-<img src='images/Map Pin Line.svg'/>
+        <Stack direction=" row" gap= "100px">
+          <Box className="Driver">
+         <Button colorScheme='' variant='link'
+         width="63px" 
+height="23px" 
+  fontStyle="normal" 
+    fontHeight="600" 
+    fontSize="20px"
+    lineHeight="150%" 
+    paddingTop="50px"
+ 
+           _hover={{
+textDecorationColor:'blue',
+paddingBottom:'20px',
+  paddingRight:'60px',
+  paddingLeft:'70px',
+borderBottom: ' 4px solid #2B4BF2',
+         
+            }}
+        >
+    Driver
+  </Button>
+
+          </Box>
+             <Box className="Rider">
+                   <Button colorScheme='' variant='link'
+                           width="63px" 
+height="23px" 
+  fontStyle="normal" 
+    fontHeight="600" 
+    fontSize="20px"
+    lineHeight="150%"
+    paddingTop="50px"
+
+           _hover={{
+         
+
+textDecorationColor:'blue',
+paddingBottom:'20px',
+    paddingRight:'60px',
+  paddingLeft:'70px',
+borderBottom: ' 5px solid #2B4BF2',
+         
+            }}
+        >
+    Rider
+  </Button>
+
+          </Box>
+ 
+        </Stack>
+        <Stack direction="column" gap="10px" >
+          <Box className="origin_Destination">
+     <Select placeholder='Origin'
+     display="flex" 
+flexDirection="row" 
+alignItems="center" 
+padding="0px"
+width="342px" 
+height="62px" 
+border="4px solid rgba(196, 196, 196, 0.2)" 
+borderRadius="18px"  >
+
+  <option value='option1'>Option 1</option>
+  <option value='option2'>Option 2</option>
+  <option value='option3'>Option 3</option>
+</Select>
 </Box>
-  <Box className="from_input">
-<Input  placeholder="  From " width="260px"/>
-<Input placeholder="To" width="85px"  height="38px"/>
+ <Box className="Add_stops">
+  <p>Add Stop</p>
+  <PlusSquareIcon
+  width="24px" 
+height="20px" 
+/>
+
+ </Box>
+      <Box className="origin_Destination">
+     <Select placeholder='Destination'
+     display="flex" 
+flexDirection="row" 
+alignItems="center" 
+padding="0px"
+width="342px" 
+height="62px" 
+border="4px solid rgba(196, 196, 196, 0.2)" 
+borderRadius="18px"  >
+
+  <option value='option1'>Option 1</option>
+  <option value='option2'>Option 2</option>
+  <option value='option3'>Option 3</option>
+</Select>
 </Box>
 </Stack>
 
-<Stack direction="row">
-        <Box className="car_desc">
-          <h5> Car model</h5>
-          <h3>Toyota Yaris-2012</h3>
-        </Box>
-        <Box className="car_img">
-<img src="images/car.jpg"/>
-        </Box>
-        
+<Stack direction="row"  gap="60px">
+  <Stack direction="row">
+        <Box className="date">
+<Image 
+position="relative"
+top="20px"
+src='images/date.svg'/>
+</Box>
+<Box className="date_desc">
+<h5>Date</h5>
+<h1>Mon,25 jul</h1>
+</Box>
+  </Stack>
+
+<Stack direction="row" >
+       <Box className="date">
+<Image 
+position="relative"
+top="20px"
+src='images/Circle.png'/>
+</Box>
+<Box className="date_desc">
+<h5>Time</h5>
+<h1>7:30 - 8:00 a.m</h1>
+</Box>
+     </Stack>   
 </Stack>
 <Stack>
- <Box className="down_section">
-<h5> Licensed Plate</h5>
-          <h3>H xxxx DA</h3>
-          
- </Box>
  <Box className="number_section">
 <h5> Number of seats</h5>
  <Wrap spacing={4} >
@@ -114,7 +187,6 @@ export default function Home() {
     <WrapItem>
       <Button colorScheme='gray'>5</Button>
     </WrapItem>
-
     </Wrap>
  </Box>
 </Stack>
@@ -124,9 +196,8 @@ export default function Home() {
         <Stack mt={8} direction={'row'} spacing={4}>
           
           <Button
-            flex={1}
+           
             fontSize={'sm'}
-            
             bg={'blue.500'}
             color={'white'}
             boxShadow={
@@ -135,12 +206,11 @@ export default function Home() {
         
             display={ 'flex'}
 justify-content={'center'} 
-align-items={'center'} 
-padding= {'12px 16px'}
-
-width= {'294px'}
+alignItems={'center'} 
+padding= {'12px 50px'}
+width= {'350px'}
 height= {'56px'}
-border-radius={'80px'} 
+borderRadius={'20px'} 
 position="relative"
 top="40px"
             _hover={{

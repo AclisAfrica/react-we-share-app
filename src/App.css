@@ -236,7 +236,7 @@ font-style: normal;
   height: 95px;
   position :relative;
   top:40px;
-  left:-35px;
+  left:-29px;
 }
 
 .number_section h5{
@@ -247,29 +247,131 @@ color: #C4C4C4;
   position: relative;
   left: -85px;
 }
-.profil_desc{
-  display:flex;
-  flex-direction:row;
-    justify-content: flex-start;
-    align-items: center;
+.Pass_desc{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+ position:relative;
+ top:-100px;
     gap: 12px;
     width: 310px;
-    height: 20px;
+    height: 100px;
     border-radius: 8px;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 125%;
-      text-align: right;
-      color: #000000;
 }
 
-.Username{
-  width: 286px;
-    height: 20px;
+
+
+.Pass_desc h3{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 286px;
+      height: 20px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000000;
+      position: relative;
+      top: 140px;
+      left: 50px;
+
+}
+.Pass_desc h1{
+display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: relative;
+  top: 160px;
+  left: 8px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px;
+    line-height: 125%;
+    color: #000000;
+  width: 286px;
+  height: 20px;
+
+}
+.Pass_desc h5{
+  width: 6px;
+    height: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 125%;
+    color: #000000;
+    position:relative;
+  left:-132px;
+    top:195px;
+}
+.Pass_desc h4 {
+  width: 40px;
+  height: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 125%;
+  color: #000000;
+  position: relative;
+  left: -132px;
+  top: 195px;
+}
+
+.user_profil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.hamburger{
+width: 50px;
+  height: 24px;
+}
+.Add_stops{
+  display:flex;
+  flex-direction:row;
+  gap:250px;
+}
+.Add_stops p{
+
+  height: 18px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #000000;
+  position:relative;
+  left:10px;
+}
+.date_desc{
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 100px;
+    height: 49px;
+}
+.date_desc h5{
+  position:relative;
+  top:15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  color: #C4C4C4;
+}
+.date_desc h1{
+position:relative;
+top:20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
     line-height: 125%;
     color: #000000;
 }
