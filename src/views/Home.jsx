@@ -16,19 +16,19 @@ import '../App.css';
 export default function Home() {
 
   return (
-    <Center py={6}>
-      
+    <Center >
+       
       <Box className="Card"
         maxW={'390px'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}
         rounded={'lg'}
-        p={6}
+      
         textAlign={'center'}>
 
-           <NavBar/>
          
+         <NavBar/> 
       <Box>
 <Text
 

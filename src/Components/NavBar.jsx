@@ -24,7 +24,8 @@ export default function Home() {
     as={IconButton}
     aria-label='Options'
     icon={<HamburgerIcon />}
-
+position="relative"
+left="-15px"
     variant='outline'
   />
   <MenuList>
