@@ -8,10 +8,9 @@ import {
   Text,
 Image,
   useColorModeValue,
-
   Select,
 } from '@chakra-ui/react';
-import { HamburgerIcon,PlusSquareIcon} from '@chakra-ui/icons'
+import NavBar from'../Components/NavBar.jsx';
 import '../App.css';
 
 export default function Home() {
@@ -28,75 +27,59 @@ export default function Home() {
         p={6}
         textAlign={'center'}>
 
-           <Stack align={'center'} justify-content={'space-between'} direction={'row'} mt={6} gap="190px"  >
-            <Box className="user_profil " >
-         <Image src={'images/girl.png'}/>
-         <Text
-          width="60px" 
-height="30px" 
+           <NavBar/>
+         
+      <Box>
+<Text
+
+ width="100px" 
+height="23px" 
+
+fontFamily= 'Inter'
 fontStyle="normal" 
-fontWeight="400" 
-fontSize="20px" 
-lineHeight="155%" 
+fontSize="19px"
+lineHeight="125%" 
 textAlign="center" 
-color="#C4C4C4" 
+textTransform="uppercase" 
+color="#36AE7C"
+ >
+  Trip
+</Text>
 
-         >Jean</Text>
-          </Box>
-          <Box className="hamburger">
-<HamburgerIcon />
-          </Box>
-        </Stack>
-        <Stack direction=" row" gap= "100px">
+        </Box>
+        <Stack direction=" row" gap= "100px" mt="40px" ml="-30px">
           <Box className="Driver">
-         <Button colorScheme='' variant='link'
-         width="63px" 
-height="23px" 
-  fontStyle="normal" 
-    fontHeight="600" 
-    fontSize="20px"
-    lineHeight="150%" 
-    paddingTop="50px"
- 
-           _hover={{
-textDecorationColor:'blue',
-paddingBottom:'20px',
-  paddingRight:'60px',
-  paddingLeft:'70px',
-borderBottom: ' 4px solid #2B4BF2',
-         
+        <Button
+            mt={-3.5}
+            w={'full'}
+            bg={'#36AE7C'}
+            color={'white'}
+            rounded={'xl'}
+            boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
+            width={'143px'}
+            height={'50px'}
+            _hover={{
+              bg: 'green.400',
+             
             }}
-        >
-    Driver
+            _focus={{
+              bg: 'green.200',
+            }}>
+          Driver 
+          </Button>
+          </Box>
+<Box className="Rider">
+<Button colorScheme='' variant='link' 
+position="relative"
+top="-5px"
+left="-5px"
+  _hover={{
+              color: '#36AE7C',
+            }}>
+   Rider
   </Button>
 
           </Box>
-             <Box className="Rider">
-                   <Button colorScheme='' variant='link'
-                           width="63px" 
-height="23px" 
-  fontStyle="normal" 
-    fontHeight="600" 
-    fontSize="20px"
-    lineHeight="150%"
-    paddingTop="50px"
-
-           _hover={{
-         
-
-textDecorationColor:'blue',
-paddingBottom:'20px',
-    paddingRight:'60px',
-  paddingLeft:'70px',
-borderBottom: ' 5px solid #2B4BF2',
-         
-            }}
-        >
-    Rider
-  </Button>
-
-          </Box>
- 
         </Stack>
         <Stack direction="column" gap="10px" >
           <Box className="origin_Destination">
@@ -115,14 +98,7 @@ borderRadius="18px"  >
   <option value='option3'>Option 3</option>
 </Select>
 </Box>
- <Box className="Add_stops">
-  <p>Add Stop</p>
-  <PlusSquareIcon
-  width="24px" 
-height="20px" 
-/>
 
- </Box>
       <Box className="origin_Destination">
      <Select placeholder='Destination'
      display="flex" 
@@ -179,7 +155,8 @@ src='images/Circle.png'/>
       <Button colorScheme='gray'>2</Button>
     </WrapItem>
       <WrapItem>
-      <Button colorScheme='blue'>3</Button>
+      <Button colorScheme='' bg={'#36AE7C'}
+      >3</Button>
     </WrapItem>
       <WrapItem>
       <Button colorScheme='gray'>4</Button>
@@ -198,7 +175,7 @@ src='images/Circle.png'/>
           <Button
            
             fontSize={'sm'}
-            bg={'blue.500'}
+            bg={'#36AE7C'}
             color={'white'}
             boxShadow={
               '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
@@ -214,10 +191,10 @@ borderRadius={'20px'}
 position="relative"
 top="40px"
             _hover={{
-              bg: 'blue.400',
+              bg: 'green.400',
             }}
             _focus={{
-              bg: 'blue.400',
+              bg: 'green.400',
             }}>
            Submit
           </Button>
