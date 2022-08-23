@@ -250,7 +250,7 @@ color: #C4C4C4;
     justify-content: center;
     align-items: flex-start;
  position:relative;
- top:-60px;
+ top:-100px;
  left:-130px;
     gap: 12px;
     width: 510px;
@@ -311,15 +311,13 @@ display: flex;
 .Pass_desc h4 {
   width: 90px;
   height: 15px;
-  font-family: 'Inter';
   font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 125%;
-  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 124%;
   position: relative;
-  left: -230px;
-  top: 195px;
+  left: -250px;
+  top: 193px;
 }
 .Req_desc{
   display: flex;

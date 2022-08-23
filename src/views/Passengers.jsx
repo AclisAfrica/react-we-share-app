@@ -7,11 +7,7 @@ import {
   Text,
   useColorModeValue,
 
- Menu,
 
-  MenuButton,
-  MenuList,
-  MenuItem,
 
 } from '@chakra-ui/react';
 import {ChevronDownIcon} from '@chakra-ui/icons'
@@ -68,10 +64,25 @@ export default function Passengers() {
         boxShadow={'2xl'}
         padding={9}>
  <NavBar/>
-  <Stack direction="row">
+ <Text
+  width=" 95px"
+height="23px" 
+fontFamily= 'Inter'
+fontStyle="normal" 
+fontWeight="400" 
+fontSize="18px" 
+lineHeight="125%"
+textAlign="center" 
+textTransform="uppercase" 
+color="#36AE7C" 
+position="relative"
+left="95px"
+Top=""
+ >Request</Text>
+  <Stack direction="row" >
           <Box className="Active">
 <Button
-            mt={-10.5}
+            mt={15.5}
             w={'full'}
             bg={'#36AE7C'}
             color={'white'}
@@ -90,7 +101,7 @@ export default function Passengers() {
           </Button>
           </Box>
 <Box className="Approved">
-<Button colorScheme='' mt={-10.5} variant='link' 
+<Button colorScheme='' mt={25.5}  ml={10}variant='link' 
   _hover={{
               color: '#36AE7C',
             }}>
@@ -124,20 +135,22 @@ export default function Passengers() {
       position=" relative"
 width="50px" 
 height= "25px"
-left="-240px" 
+left="-230px" 
 top="190px"
       src='images/guy.svg'/>
 
            
              <Image
               position=" relative"
-width="50px" 
-height= "25px"
+width="30px" 
+height= "20px"
 left="-240px" 
 top="190px"
               src='images/Time_Circle.svg'/>
            <h4>{data.Pending}</h4>
         <ChevronDownIcon 
+       width="24px"
+       height="24px"
  position="relative" 
  left="-80px"
  top="190px"
