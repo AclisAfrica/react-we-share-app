@@ -6,13 +6,36 @@ import {
   Button,
   Input,
   useColorModeValue,
-  Link,
+ IconButton,
 } from '@chakra-ui/react';
-import { CheckIcon,ViewIcon } from '@chakra-ui/icons';
+
+import { useState } from 'react';
+import { Icon } from 'react-icons-kit'
+import {eye} from 'react-icons-kit/feather/eye'
+import {eyeOff} from 'react-icons-kit/feather/eyeOff'
 import '../App.css';
 
-export default function Login() {
+
+
+const Login = ()=> {
+
+const[type ,setType]= useState('password');
+const [icon,setIcon]= useState(eyeOff)
+const handleToggle = () =>{
+  if (type=== 'password'){
+    setIcon(eye)
+    setType('text')
+  }
+  else{
+    setIcon(eyeOff)
+    setType('password')
+  }
+}
+
+
+
   return (
+    
     <Center py={6}>
       <Box className="Card"
         maxW={'390px'}
@@ -29,7 +52,7 @@ export default function Login() {
           color={useColorModeValue('gray.800', 'white')}
           align={'center'}
         >
-          <Text className="login"  color="#36AE7C">
+          <Text className="login"  textTransform="uppercase"  fontSize="18px"  color="#36AE7C">
           Login
           </Text>
 
@@ -41,10 +64,12 @@ export default function Login() {
             w={'full'}
             bg={'#36AE7C'}
             color={'white'}
+           
             rounded={'xl'}
             boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
             width={'143px'}
             height={'50px'}
+          
             _hover={{
               bg: 'green.400',
              
@@ -67,14 +92,21 @@ export default function Login() {
 
         <Box className="body" px={6} py={10} mb="15px">
          <Box className="input">
+              <h1>Username</h1>
+               <Input  placeholder="gmarlery@gmail.com" />
 
-               <Input  placeholder="Username" />
-
-                 <Input  placeholder="Password" />
-                 <Box className="eye">
-                    <ViewIcon />
+                <h1>password</h1>
+                
+                
+                 <input type={type} placeholder="Enter Password" />
+                 <Box className="eye" >
+                <span onClick={handleToggle}> 
+                  <Icon icon={icon} size={15}/>
+                </span>
+                    
+          </Box>
                    
-                 </Box>
+               
                    
 
         </Box>
@@ -91,7 +123,11 @@ export default function Login() {
             }}
             _focus={{
               bg: 'green.400',
-            }}>
+            }}
+            width="342px" 
+height="54px" 
+textTransform="uppercase"
+            >
            Login
           </Button>
         </Box>
@@ -102,5 +138,8 @@ export default function Login() {
         </Box>
       </Box>
     </Center>
-  );
-}
+ 
+  )
+  }
+  
+ export default Login;

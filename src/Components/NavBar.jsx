@@ -10,7 +10,7 @@ Menu,
   IconButton,
   
 } from '@chakra-ui/react';
-import { HamburgerIcon, } from '@chakra-ui/icons'
+import { HamburgerIcon} from '@chakra-ui/icons'
 import '../App.css';
 
 export default function Home() {
