@@ -5,16 +5,23 @@ import {
   Button,
  Wrap,
  WrapItem,
-  Text,
 Image,
   useColorModeValue,
   Select,
 } from '@chakra-ui/react';
 import NavBar from'../Components/NavBar.jsx';
 import '../App.css';
+import Header from'../Components/Header.jsx'
+import {useState} from 'react';
+
 
 export default function Home() {
-
+const [header, setHeader] =useState([
+  {title:'Trip',status:'Driving' , status2:'Riding',id:1 },
+    {title:'Request',status:'Active' , status2:'Approved',id:2 },
+    {title:'Stop',status:'Pick-up' , status2:'Drop-off',id:3 },
+]);
+        
   return (
     <Center >
        
@@ -29,58 +36,7 @@ export default function Home() {
 
          
          <NavBar/> 
-      <Box>
-<Text
-
- width="100px" 
-height="23px" 
-
-fontFamily= 'Inter'
-fontStyle="normal" 
-fontSize="19px"
-lineHeight="125%" 
-textAlign="center" 
-textTransform="uppercase" 
-color="#36AE7C"
- >
-  Trip
-</Text>
-
-        </Box>
-        <Stack direction=" row" gap= "100px" mt="40px" ml="-30px">
-          <Box className="Driver">
-        <Button
-            mt={-3.5}
-            w={'full'}
-            bg={'#36AE7C'}
-            color={'white'}
-            rounded={'xl'}
-            boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
-            width={'143px'}
-            height={'50px'}
-            _hover={{
-              bg: 'green.400',
-             
-            }}
-            _focus={{
-              bg: 'green.200',
-            }}>
-          Driver 
-          </Button>
-          </Box>
-<Box className="Rider">
-<Button colorScheme='' variant='link' 
-position="relative"
-top="-5px"
-left="-5px"
-  _hover={{
-              color: '#36AE7C',
-            }}>
-   Rider
-  </Button>
-
-          </Box>
-        </Stack>
+      <Header header={header.filter((data)=> data.status === 'Driving')}  />
         <Stack direction="column" gap="10px" >
           <Box className="origin_Destination">
      <Select placeholder='Origin'
