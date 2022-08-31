@@ -17,9 +17,10 @@ import {useState} from 'react';
 
 export default function Home() {
 const [header, setHeader] =useState([
-  {title:'Trip',status:'Driving' , status2:'Riding',id:1 },
-    {title:'Request',status:'Active' , status2:'Approved',id:2 },
-    {title:'Stop',status:'Pick-up' , status2:'Drop-off',id:3 },
+  {status:'Driving' , status2:'Riding',id:1 },
+    {status:'Active' , status2:'Approved',id:2 },
+    {status:'Pick-up' , status2:'Drop-off',id:3 },
+     {status: 'Email' , status2:'Phone Number', id:4},
 ]);
         
   return (
@@ -36,7 +37,7 @@ const [header, setHeader] =useState([
 
          
          <NavBar/> 
-      <Header header={header.filter((data)=> data.status === 'Driving')}  />
+      <Header header={header.filter((data)=> data.status === 'Driving')} title="Trip" />
         <Stack direction="column" gap="10px" >
           <Box className="origin_Destination">
      <Select placeholder='Origin'

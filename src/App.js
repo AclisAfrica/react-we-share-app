@@ -6,7 +6,7 @@ import{
 import Login from'./views/Login.jsx';
 import Home from'./views/Home.jsx';
 import Passengers from'./views/Passengers.jsx';
-import Confirmation from'./views/Confirmation.jsx';
+import DropOff from'./views/DropOff.jsx';
 import Pickups from'./views/Pickups.jsx';
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path='/Login' element={<Login/>}/>
   <Route path='/' element={<Home/>}/>
     <Route path='/Passengers' element={<Passengers/>}/>
-     <Route path='/Confirmation' element={<Confirmation/>}/>
+     <Route path='/DropOff' element={<DropOff/>}/>
           <Route path='/Pickups' element={<Pickups/>}/>
       </Routes>
     </Router>

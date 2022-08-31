@@ -10,9 +10,11 @@ import {
 } from '@chakra-ui/react';
 
 import { useState } from 'react';
-import { Icon } from 'react-icons-kit'
-import {eye} from 'react-icons-kit/feather/eye'
-import {eyeOff} from 'react-icons-kit/feather/eyeOff'
+import { Icon } from 'react-icons-kit';
+import {eye} from 'react-icons-kit/feather/eye';
+import {eyeOff} from 'react-icons-kit/feather/eyeOff';
+import Header from'../Components/Header.jsx';
+
 import '../App.css';
 
 
@@ -31,7 +33,12 @@ const handleToggle = () =>{
     setType('password')
   }
 }
-
+const [header, setHeader] =useState([
+  {status:'Driving' , status2:'Riding',id:1 },
+    {status:'Active' , status2:'Approved',id:2 },
+    {status:'Pick-up' , status2:'Drop-off',id:3 },
+     {status: 'Email' , status2:'Phone Number', id:4},
+]);
 
 
   return (
@@ -45,51 +52,8 @@ const handleToggle = () =>{
         rounded={'md'}
         overflow={'hidden'}
         >
-
-        <Stack
-          textAlign={'center'}
-          p={6}
-          color={useColorModeValue('gray.800', 'white')}
-          align={'center'}
-        >
-          <Text className="login"  textTransform="uppercase"  fontSize="18px"  color="#36AE7C">
-          Login
-          </Text>
-
-        </Stack>
-        <Stack direction="row">
-          <Box className="Email">
-<Button
-            mt={-3.5}
-            w={'full'}
-            bg={'#36AE7C'}
-            color={'white'}
-           
-            rounded={'xl'}
-            boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
-            width={'143px'}
-            height={'50px'}
-          
-            _hover={{
-              bg: 'green.400',
-             
-            }}
-            _focus={{
-              bg: 'green.200',
-            }}>
-           Email
-          </Button>
-          </Box>
-<Box className="Phone">
-<Button colorScheme='' variant='link' 
-  _hover={{
-              color: '#36AE7C',
-            }}>
-    Phone Number
-  </Button>
-</Box>
-        </Stack>
-
+<Header header={header.filter((data)=> data.status === 'Email')} title="Login" /> 
+        
         <Box className="body" px={6} py={10} mb="15px">
          <Box className="input">
               <h1>Username</h1>

@@ -10,9 +10,17 @@ import {
 } from '@chakra-ui/react';
 import {ChevronDownIcon} from '@chakra-ui/icons'
 import NavBar from'../Components/NavBar.jsx';
+import Header from'../Components/Header.jsx'
+import {useState} from 'react';
 import '../App.css';
 
-export default function Passengers() {
+export default function DropOff() {
+   const [header, setHeader] =useState([
+  {status:'Driving' , status2:'Riding',id:1 },
+    {status:'Active' , status2:'Approved',id:2 },
+    {status:'Pick-up' , status2:'Drop-off',id:3 },
+     {status: 'Email' , status2:'Phone Number', id:4},
+]);
    let Pass_desc=[
      {
        id:1,
@@ -58,51 +66,7 @@ export default function Passengers() {
         boxShadow={'2xl'}
         padding={9}>
  <NavBar/>
- <Text
-  width=" 95px"
-height="23px" 
-fontFamily= 'Inter'
-fontStyle="normal" 
-fontWeight="400" 
-fontSize="18px" 
-lineHeight="125%"
-textAlign="center" 
-textTransform="uppercase" 
-color="#36AE7C" 
-position="relative"
-left="95px"
-Top=""
- >Stop</Text>
-  <Stack direction="row" >
-          <Box className="Active">
-<Button
-            mt={15.5}
-            w={'full'}
-            bg={'#36AE7C'}
-            color={'white'}
-            rounded={'xl'}
-            boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
-            width={'143px'}
-            height={'50px'}
-            _hover={{
-              bg: 'green.400',
-             
-            }}
-            _focus={{
-              bg: 'green.200',
-            }}>
-        Pick-up
-          </Button>
-          </Box>
-<Box className="Approved">
-<Button colorScheme='' mt={25.5}  ml={10}variant='link' 
-  _hover={{
-              color: '#36AE7C',
-            }}>
-  Drop-off
-  </Button>
-</Box>
-        </Stack>
+  <Header header={header.filter((data)=> data.status === 'Pick-up')} title="Stops" /> 
           
        {
         Pass_desc.map((data,index)=>(
