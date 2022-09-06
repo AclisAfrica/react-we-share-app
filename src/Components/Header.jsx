@@ -89,6 +89,9 @@ content:"Driving ";
   width: 45%;
   color:white;
   font-weight:700;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   position : absolute;
   border-radius: 10%;
 top: 0%;
@@ -106,8 +109,11 @@ transform:translate(20%,-50%);
 }
 
 .toggle:checked:before{
+  display:flex;
+  align-items: center;
+  justify-content: center;
   content:'Riding';
-  left:70%;
+  left:55%;
   color: white;
   
 }
