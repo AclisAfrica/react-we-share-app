@@ -10,7 +10,10 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
- 
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
 
 
 } from '@chakra-ui/react';
@@ -97,7 +100,7 @@ left="-240px"
 top="193px"
               src='images/Time_Circle.svg'/>
            <h4 className="Pending">{data.Pending}</h4>
-
+           
         <Menu>
   <MenuButton as={Button} 
     width="24px"
