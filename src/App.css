@@ -256,15 +256,17 @@ color: #C4C4C4;
     justify-content: center;
     align-items: flex-start;
  position:relative;
- top:-100px;
- left:-130px;
-    width: 510px;
+ top:-10px;
+ left:-100px;
+    width: 300px;
     height: 100px;
-    
     border-radius: 8px;
 }
 
 
+.Pass_desc:hover {
+  background-color: #EEF2E6;
+}
 
 .Pass_desc h3{
   display: flex;
@@ -299,7 +301,7 @@ color: #C4C4C4;
     top:"150px";
     left:"70px";
 }
-.Pass_desc h1{
+.location {
 display: flex;
  
   align-items: center;
@@ -330,7 +332,7 @@ display: flex;
   left:-132px;
     top:195px;
 }
-.Pass_desc h4 {
+.Pending {
   width: 90px;
   height: 15px;
   font-style: normal;

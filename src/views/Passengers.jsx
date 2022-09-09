@@ -10,10 +10,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
+ 
 
 
 } from '@chakra-ui/react';
@@ -22,7 +19,7 @@ import NavBar from'../Components/NavBar.jsx';
 import Header from'../Components/Header.jsx'
 
 import '../App.css';
-import Test from '../Components/Test.jsx';
+
 
 export default function Passengers() {
 
@@ -72,19 +69,19 @@ export default function Passengers() {
         padding={9}>
  <NavBar/>
       <Header  title="Request" />      
-      <Box>
+      <div>
   < input  type="checkbox" className="toggle_4"/>
-</Box>
+</div>
 
        {
         Pass_desc.map((data)=>(
           <Box className='Pass_desc' key={data.id}>
-            <h3>{data.name}</h3>
-            <h1>{data.Location}</h1>
+
+            <h1 className="location">{data.Location}</h1>
 
       <Image 
       position=" relative"
-width="50px" 
+width="60px" 
 height= "25px"
 left="-240px" 
 top="190px"
@@ -99,16 +96,17 @@ height= "20px"
 left="-240px" 
 top="193px"
               src='images/Time_Circle.svg'/>
-           <h4>{data.Pending}</h4>
+           <h4 className="Pending">{data.Pending}</h4>
+
         <Menu>
   <MenuButton as={Button} 
     width="24px"
        height="24px"
  position="relative" 
  left="-80px"
- top="190px"
+ top="185px"
  gap="10px"
-  
+ bg="white"
   rightIcon={<ChevronDownIcon />}>
      
   </MenuButton>
