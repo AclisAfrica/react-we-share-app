@@ -33,12 +33,6 @@ const handleToggle = () =>{
     setType('password')
   }
 }
-const [header, setHeader] =useState([
-  {status:'Driving' , status2:'Riding',id:1 },
-    {status:'Active' , status2:'Approved',id:2 },
-    {status:'Pick-up' , status2:'Drop-off',id:3 },
-     {status: 'Email' , status2:'Phone Number', id:4},
-]);
 
 
   return (
@@ -52,8 +46,10 @@ const [header, setHeader] =useState([
         rounded={'md'}
         overflow={'hidden'}
         >
-<Header header={header.filter((data)=> data.status === 'Email')} title="Login" /> 
-        
+<Header  title="Login" /> 
+        <Box>
+  < input  type="checkbox" className="toggle_1"/>
+</Box>
         <Box className="body" px={6} py={10} mb="15px">
          <Box className="input">
               <h1>Username</h1>

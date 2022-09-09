@@ -6,26 +6,30 @@ import {
   Box,
   Text,
   useColorModeValue,
-
+ Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
 
 
 } from '@chakra-ui/react';
 import {ChevronDownIcon} from '@chakra-ui/icons'
 import NavBar from'../Components/NavBar.jsx';
 import Header from'../Components/Header.jsx'
-import {useState} from 'react';
+
 import '../App.css';
+import Test from '../Components/Test.jsx';
 
 export default function Passengers() {
-const [header, setHeader] =useState([
-  {status:'Driving' , status2:'Riding',id:1 },
-    {status:'Active' , status2:'Approved',id:2 },
-    {status:'Pick-up' , status2:'Drop-off',id:3 },
-]);
+
    let Pass_desc=[
      {
        id:1,
-  Location:"Kiosque",
+  Location:"Petit Seminaire",
   img:"/images/Line 2.svg",
   usersImage:"images/Users.svg",
   circle:"images/Time_circle.svg",
@@ -34,31 +38,30 @@ const [header, setHeader] =useState([
 },{
   id:2,
         
-  Location:"kiosque",
+  Location:"Petit seminaire ",
   img:"/images/Line 2.svg",
-
   usersImage:"images/Users.svg",
   circle:"images/Time_circle.svg",
   Pending :"Pending",
 
 },{
   id:3,
-  Location:"kiosque",
+  Location:"Kiosque sangwe",
   img:"/images/Line 2.svg",
   circle:"images/Time_circle.svg",
   Pending :"Pending",
   
 },{
  id:4,
-  Location:"kiosque",
+  Location:"International",
   img:"/images/Line 2.svg",
   circle:"images/Time_circle.svg",
-  Pending :"Pending",
+  Pending :" 2Pending",
 
 }
     ]
   return (
-    <Center>
+       <Center>
       <Stack
        maxW={'390px'}
         w={'full'}
@@ -68,34 +71,24 @@ const [header, setHeader] =useState([
         boxShadow={'2xl'}
         padding={9}>
  <NavBar/>
-      <Header header={header.filter((data)=> data.status === 'Active')} title="Request" />      
+      <Header  title="Request" />      
+      <Box>
+  < input  type="checkbox" className="toggle_4"/>
+</Box>
+
        {
-        Pass_desc.map((data,index)=>(
+        Pass_desc.map((data)=>(
           <Box className='Pass_desc' key={data.id}>
             <h3>{data.name}</h3>
             <h1>{data.Location}</h1>
- <Text
- display="flex" 
-    flexDirection='row'
-    alignItems='center'
-   verticalAlign="top"
-    width='20rem'
-    height= '40px'
-    fontStyle='normal'
-   fontWeight="600"
-   fontSize="16px"
-   color="#000000"
-   position="relative"
-   top="150px"
-   left="70px"
-  >
-  {data.dest}</Text>
+
       <Image 
       position=" relative"
 width="50px" 
 height= "25px"
-left="-230px" 
+left="-240px" 
 top="190px"
+
       src='images/guy.svg'/>
 
            
@@ -104,16 +97,29 @@ top="190px"
 width="30px" 
 height= "20px"
 left="-240px" 
-top="190px"
+top="193px"
               src='images/Time_Circle.svg'/>
            <h4>{data.Pending}</h4>
-        <ChevronDownIcon 
-       width="24px"
+        <Menu>
+  <MenuButton as={Button} 
+    width="24px"
        height="24px"
  position="relative" 
  left="-80px"
  top="190px"
- gap="10px"/> 
+ gap="10px"
+  
+  rightIcon={<ChevronDownIcon />}>
+     
+  </MenuButton>
+  <MenuList>
+    <MenuItem>Download</MenuItem>
+    <MenuItem>Create a Copy</MenuItem>
+    <MenuItem>Mark as Draft</MenuItem>
+    <MenuItem>Delete</MenuItem>
+    <MenuItem>Attend a Workshop</MenuItem>
+  </MenuList>
+</Menu>
   </Box>
         ))
        }

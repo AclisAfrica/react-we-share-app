@@ -6,70 +6,69 @@ import {
   Box,
   Text,
   useColorModeValue,
+  VStack,
+
 
 } from '@chakra-ui/react';
 import {ChevronDownIcon} from '@chakra-ui/icons'
 import NavBar from'../Components/NavBar.jsx';
-import Header from'../Components/Header.jsx'
-import {useState} from 'react';
+import Test from'../Components/Test.jsx';
 import '../App.css';
 
+import Header from'../Components/Header.jsx'
+
 export default function DropOff() {
-   const [header, setHeader] =useState([
-  {status:'Driving' , status2:'Riding',id:1 },
-    {status:'Active' , status2:'Approved',id:2 },
-    {status:'Pick-up' , status2:'Drop-off',id:3 },
-     {status: 'Email' , status2:'Phone Number', id:4},
-]);
-   let Pass_desc=[
+  
+let Pass_desc=[
      {
        id:1,
-  Location:"Kiosque",
+  Location:"centre ville",
   img:"/images/Line 2.svg",
-  Pending :"2MINS",
+  Pending :"ONBOARD",
  
 },{
   id:2,
-  Location:"kiosque",
-  img:"/images/Line 2.svg",
-
-  usersImage:"images/Users.svg",
-
-  circle:"images/Time_circle.svg",
-  Pending :"2MINS",
+  Location:"korosi",
+  Pending :"ONBOARD",
 
 },{
   id:3,
-  Location:"kiosque",
+  Location:"Parque",
   img:"/images/Line 2.svg",
-
-  circle:"images/Time_circle.svg",
-  Pending :"2MINS",
+  Pending :"ONBOARD",
   
 },{
  id:4,
-  Location:"kiosque",
+  Location:"Mutuel",
   img:"/images/Line 2.svg",
-  circle:"images/Time_circle.svg",
-  Pending :"2MINS",
+  Pending :"ONBOARD",
 
 }
     ]
+        
   return (
-    <Center>
-      <Stack
-       maxW={'390px'}
+    <Center >
+       
+      <Box className="Card"
+        maxW={'390px'}
         w={'full'}
-        height="837px"
-        direction={{ base: 'column', md: 'column' }}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}
-        padding={9}>
- <NavBar/>
-  <Header header={header.filter((data)=> data.status === 'Pick-up')} title="Stops" /> 
-          
-       {
-        Pass_desc.map((data,index)=>(
+        rounded={'lg'}
+      
+        textAlign={'center'}>
+
+         
+    <NavBar/>  
+      <Header  title="Trip" />
+      <Box>
+  < input  type="checkbox" className="toggle_2"/>
+</Box>
+
+<Test/>
+
+        {
+        Pass_desc.map((data)=>(
           <Box className='Pass_desc' key={data.id}>
             <h3>{data.name}</h3>
             <h1>{data.Location}</h1>
@@ -93,19 +92,9 @@ export default function DropOff() {
       position=" relative"
 width="50px" 
 height= "25px"
-left="-230px" 
+left="-250px" 
 top="190px"
       src='images/guy.svg'/>
-
-           
-             <Image
-              position=" relative"
-width="40px" 
-height= "20px"
-left="-240px" 
-top="190px"
-color="#000000"
-              src='images/Time_Circle.svg'/>
            <h4>{data.Pending}</h4>
         <ChevronDownIcon 
        width="24px"
@@ -114,19 +103,20 @@ color="#000000"
  left="-80px"
  top="190px"
  gap="10px"/> 
+
   </Box>
+  
         ))
        }
-      </Stack>
+  
+
+
+
+
+       
+
+     
+      </Box>
     </Center>
   );
 }
-
-
-
-
-
-
-
-
-

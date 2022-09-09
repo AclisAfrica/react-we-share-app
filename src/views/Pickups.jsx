@@ -10,40 +10,43 @@ import {
 } from '@chakra-ui/react';
 import {ChevronDownIcon} from '@chakra-ui/icons'
 import NavBar from'../Components/NavBar.jsx';
-import '../App.css';
 import Header from'../Components/Header.jsx'
-import {useState} from 'react';
+import Test from'../Components/Test.jsx';
+import '../App.css';
 
 export default function Pickups() {
-  const [header, setHeader] =useState([
-  {status:'Driving' , status2:'Riding',id:1 },
-    {status:'Active' , status2:'Approved',id:2 },
-    {status:'Pick-up' , status2:'Drop-off',id:3 },
-    {status: 'Email' , status2:'Phone Number', id:4},
-]);
+
    let Pass_desc=[
      {
        id:1,
-  Location:"centre ville",
+  Location:"Kiosque",
   img:"/images/Line 2.svg",
-  Pending :"ONBOARD",
+  Pending :"2MINS",
  
 },{
   id:2,
-  Location:"korosi",
-  Pending :"ONBOARD",
+  Location:"kiosque",
+  img:"/images/Line 2.svg",
+
+  usersImage:"images/Users.svg",
+
+  circle:"images/Time_circle.svg",
+  Pending :"2MINS",
 
 },{
   id:3,
-  Location:"Parque",
+  Location:"kiosque",
   img:"/images/Line 2.svg",
-  Pending :"ONBOARD",
+
+  circle:"images/Time_circle.svg",
+  Pending :"2MINS",
   
 },{
  id:4,
-  Location:"Mutuel",
+  Location:"kiosque",
   img:"/images/Line 2.svg",
-  Pending :"ONBOARD",
+  circle:"images/Time_circle.svg",
+  Pending :"2MINS",
 
 }
     ]
@@ -58,8 +61,11 @@ export default function Pickups() {
         boxShadow={'2xl'}
         padding={9}>
  <NavBar/>
- <Header header={header.filter((data)=> data.status === 'Pick-up')} title="Stops" />    
-          
+  <Header  title="Stops" /> 
+         <Box>
+  < input  type="checkbox" className="toggle_2"/>
+</Box>
+<Test/> 
        {
         Pass_desc.map((data,index)=>(
           <Box className='Pass_desc' key={data.id}>
@@ -85,9 +91,19 @@ export default function Pickups() {
       position=" relative"
 width="50px" 
 height= "25px"
-left="-250px" 
+left="-230px" 
 top="190px"
       src='images/guy.svg'/>
+
+           
+             <Image
+              position=" relative"
+width="40px" 
+height= "20px"
+left="-240px" 
+top="190px"
+color="#000000"
+              src='images/Time_Circle.svg'/>
            <h4>{data.Pending}</h4>
         <ChevronDownIcon 
        width="24px"

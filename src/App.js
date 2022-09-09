@@ -6,8 +6,8 @@ import{
 import Login from'./views/Login.jsx';
 import Home from'./views/Home.jsx';
 import Passengers from'./views/Passengers.jsx';
-import DropOff from'./views/DropOff.jsx';
-import Pickups from'./views/Pickups.jsx';
+import DropOff from'./views/DropOff';
+import Pickups from'./views/Pickups';
 function App() {
   return (
     <Router>
@@ -16,7 +16,7 @@ function App() {
   <Route path='/' element={<Home/>}/>
     <Route path='/Passengers' element={<Passengers/>}/>
      <Route path='/DropOff' element={<DropOff/>}/>
-          <Route path='/Pickups' element={<Pickups/>}/>
+            <Route path='/Pickups' element={<Pickups/>}/>
       </Routes>
     </Router>
   );
