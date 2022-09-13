@@ -467,62 +467,7 @@ left:100px;
   left: 0;
 
 }
-.toggle_2 {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 250px;
-  height: 50px;
-  background-color: white;
-  border-radius: 15px;
-  position: relative;
-  top:10px;
-  left:30px;
-  outline: none;
-}
 
-.toggle_2:before {
-  content: "Pick-up ";
-  background: #36AE7C;
-  font-size: 1 rem;
-  height: 50px;
-  width: 45%;
-  color: white;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  border-radius: 10%;
-  top: 0%;
-  left: 0%;
-}
-
-.toggle_2:after {
-  content: "Drop_off ";
-  position: absolute;
-  font-size: 1 rem;
-  font-weight: 700;
-  top: 50%;
-  left: 70%;
-  transform: translate(20%, -50%);
-}
-
-.toggle_2:checked:before {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  content: 'Drop-Off';
-  left: 55%;
-  color: white;
-
-}
-
-.toggle_2:checked:after {
-  content: 'Pick-up';
-  left: 0;
-
-}
 .toggle_3 {
   appearance: none;
   -webkit-appearance: none;

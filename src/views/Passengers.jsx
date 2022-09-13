@@ -38,7 +38,7 @@ export default function Passengers() {
 
 },{
   id:3,
-  Location:"Kiosque sangwe",
+  Location:"Kiosque ",
   Pending :"Pending",
   
 },{
@@ -68,7 +68,7 @@ export default function Passengers() {
        {
         Pass_desc.map((data)=>(
           <Box className='Pass_desc' key={data.id}>
-            <h1 className="location">{data.Location}</h1>
+            <h1 >{data.Location}</h1>
             <img  src='images/guy.svg'/>
              <img src='images/Time_Circle.svg'/>
              <h4 >{data.Pending}</h4>
@@ -85,7 +85,7 @@ color="black"
 bg=" "
 colorScheme=" "
   _hover={{
-              bg: '#eef2e6',
+              bg: '#aee8ce',
             }}
   rightIcon={<ChevronDownIcon />}>
      
@@ -118,6 +118,16 @@ const Container= styled.div`
     width: 300px;
     height: 80px;
     border-radius: 8px;
+
+    h1{
+width: 119px;
+height: 20px;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 125%;
+color: #000000;
+    }
    
   img{
 padding: 2px;
@@ -145,7 +155,7 @@ color: #000000;
 }
 
 .Pass_desc:hover {
-  background-color: #EEF2E6;
+  background-color: #aee8ce;
 }
 `
 

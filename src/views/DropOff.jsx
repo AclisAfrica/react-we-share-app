@@ -6,117 +6,219 @@ import {
   Box,
   Text,
   useColorModeValue,
-  VStack,
-
+ Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  
 
 } from '@chakra-ui/react';
+import styled from 'styled-components';
 import {ChevronDownIcon} from '@chakra-ui/icons'
 import NavBar from'../Components/NavBar.jsx';
-import Test from'../Components/Test.jsx';
-import '../App.css';
-
 import Header from'../Components/Header.jsx'
 
-export default function DropOff() {
-  
-let Pass_desc=[
+import '../App.css';
+
+
+export default function Passengers() {
+
+   let Pass_desc=[
      {
        id:1,
-  Location:"centre ville",
-  img:"/images/Line 2.svg",
-  Pending :"ONBOARD",
- 
+  Location:"Petit Seminaire",
+    Pending :"On Board",
+
 },{
   id:2,
-  Location:"korosi",
-  Pending :"ONBOARD",
+        
+  Location:"Petit seminaire ",
+  img:"/images/Line 2.svg",
+  Pending :"on board",
 
 },{
   id:3,
-  Location:"Parque",
-  img:"/images/Line 2.svg",
-  Pending :"ONBOARD",
+  Location:"Kiosque ",
+  Pending :"on Board",
   
 },{
  id:4,
-  Location:"Mutuel",
-  img:"/images/Line 2.svg",
-  Pending :"ONBOARD",
+  Location:" Kiosque Menya",
+  Pending :" 2 Mins",
 
 }
     ]
-        
   return (
-    <Center >
-       
-      <Box className="Card"
-        maxW={'390px'}
+    <Container>
+       <Center>
+      <Stack
+       maxW={'390px'}
         w={'full'}
+        height="837px"
+        direction={{ base: 'column', md: 'column' }}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}
-        rounded={'lg'}
-      
-        textAlign={'center'}>
-
-         
-    <NavBar/>  
-      <Header  title="Trip" />
-      <Box>
+        padding={9}>
+ <NavBar/>
+      <Header  title="Stops" />      
+      <div>
   < input  type="checkbox" className="toggle_2"/>
-</Box>
+</div>
 
-<Test/>
-
-        {
+       {
         Pass_desc.map((data)=>(
-          <Box className='Pass_desc' key={data.id}>
-            <h3>{data.name}</h3>
-            <h1>{data.Location}</h1>
- <Text
- display="flex" 
-    flexDirection='row'
-    alignItems='center'
-   verticalAlign="top"
-    width='20rem'
-    height= '40px'
-    fontStyle='normal'
-   fontWeight="600"
-   fontSize="16px"
-   color="#000000"
-   position="relative"
-   top="150px"
-   left="70px"
-  >
-  {data.dest}</Text>
-      <Image 
-      position=" relative"
-width="50px" 
-height= "25px"
-left="-250px" 
-top="190px"
-      src='images/guy.svg'/>
-           <h4>{data.Pending}</h4>
-        <ChevronDownIcon 
-       width="24px"
-       height="24px"
+          <Box className='Pick_desc' key={data.id}>
+            <h1 >{data.Location}</h1>
+            <img  src='images/guy.svg'/>
+             <img src='images/Time_Circle.svg'/>
+             <h4 >{data.Pending}</h4>
+           
+        <Menu>
+  <MenuButton as={Button} 
+    width="24px"
+       height="70px"
  position="relative" 
- left="-80px"
- top="190px"
- gap="10px"/> 
-
+ left="30px"
+ top="0px"
+ gap="10px"
+color="black"
+bg=" "
+colorScheme=" "
+  _hover={{
+              bg: '#aee8ce',
+            }}
+  rightIcon={<ChevronDownIcon />}>
+     
+  </MenuButton>
+  <MenuList>
+    <MenuItem>Download</MenuItem>
+    <MenuItem>Create a Copy</MenuItem>
+    <MenuItem>Mark as Draft</MenuItem>
+    <MenuItem>Delete</MenuItem>
+    <MenuItem>Attend a Workshop</MenuItem>
+  </MenuList>
+</Menu>
   </Box>
-  
         ))
        }
-  
-
-
-
-
-       
-
-     
-      </Box>
+      </Stack>
     </Center>
+    </Container>
   );
 }
+const Container= styled.div`
+.Pick_desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+ position:relative;
+ top:55px;
+ left:-15px;
+    width: 300px;
+    height: 70px;
+    border-radius: 8px;
+
+    h1{
+width: 119px;
+height: 20px;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 125%;
+color: #000000;
+    }
+   
+  img{
+padding: 2px;
+width: 28px;
+height: 28px;
+border-radius: 32px;
+position:relative;
+top:35px;
+left:-120px;
+  }
+  h4{
+    position:relative;
+    top:40px;
+    left:-115px;
+width: 73px;
+height: 18px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 125%;
+text-transform: uppercase;
+color: #000000;
+  }
+}
+
+.Pick_desc:hover {
+  background-color: #aee8ce;
+}
+.toggle_2 {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 290px;
+  height: 50px;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  top:10px;
+  left:0px;
+  outline: none;
+}
+
+.toggle_2:before {
+  content: "Pick-up ";
+  background: #36AE7C;
+  font-size: 1 rem;
+  height: 50px;
+  width: 45%;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 10%;
+  top: 0%;
+  left: 0%;
+}
+
+.toggle_2:after {
+  content: "Drop_off ";
+  position: absolute;
+  font-size: 1 rem;
+  font-weight: 700;
+  top: 50%;
+  left: 70%;
+  transform: translate(20%, -50%);
+}
+
+.toggle_2:checked:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: 'Drop-Off';
+  left: 55%;
+  color: white;
+
+}
+
+.toggle_2:checked:after {
+  content: 'Pick-up';
+  left: 0;
+
+}
+`
+
+
+
+
+
+
+
+
