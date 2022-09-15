@@ -10,10 +10,10 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
- 
-
+  
 
 } from '@chakra-ui/react';
+import styled from 'styled-components';
 import {ChevronDownIcon} from '@chakra-ui/icons'
 import NavBar from'../Components/NavBar.jsx';
 import Header from'../Components/Header.jsx'
@@ -27,37 +27,29 @@ export default function Passengers() {
      {
        id:1,
   Location:"Petit Seminaire",
-  img:"/images/Line 2.svg",
-  usersImage:"images/Users.svg",
-  circle:"images/Time_circle.svg",
-  Pending :"Pending",
-  pickUp:"confirm",
+    Pending :"Pending",
+
 },{
   id:2,
         
   Location:"Petit seminaire ",
   img:"/images/Line 2.svg",
-  usersImage:"images/Users.svg",
-  circle:"images/Time_circle.svg",
   Pending :"Pending",
 
 },{
   id:3,
-  Location:"Kiosque sangwe",
-  img:"/images/Line 2.svg",
-  circle:"images/Time_circle.svg",
+  Location:"Kiosque ",
   Pending :"Pending",
   
 },{
  id:4,
-  Location:"International",
-  img:"/images/Line 2.svg",
-  circle:"images/Time_circle.svg",
+  Location:" Kiosque Menya",
   Pending :" 2Pending",
 
 }
     ]
   return (
+    <Container>
        <Center>
       <Stack
        maxW={'390px'}
@@ -76,37 +68,25 @@ export default function Passengers() {
        {
         Pass_desc.map((data)=>(
           <Box className='Pass_desc' key={data.id}>
-
-            <h1 className="location">{data.Location}</h1>
-
-      <Image 
-      position=" relative"
-width="60px" 
-height= "25px"
-left="-240px" 
-top="190px"
-
-      src='images/guy.svg'/>
-
+            <h1 >{data.Location}</h1>
+            <img  src='images/guy.svg'/>
+             <img src='images/Time_Circle.svg'/>
+             <h4 >{data.Pending}</h4>
            
-             <Image
-              position=" relative"
-width="30px" 
-height= "20px"
-left="-240px" 
-top="193px"
-              src='images/Time_Circle.svg'/>
-           <h4 className="Pending">{data.Pending}</h4>
-
         <Menu>
   <MenuButton as={Button} 
     width="24px"
-       height="24px"
+       height="80px"
  position="relative" 
- left="-80px"
- top="185px"
+ left="30px"
+ top="0px"
  gap="10px"
- bg="white"
+color="black"
+bg=" "
+colorScheme=" "
+  _hover={{
+              bg: '#aee8ce',
+            }}
   rightIcon={<ChevronDownIcon />}>
      
   </MenuButton>
@@ -123,14 +103,56 @@ top="193px"
        }
       </Stack>
     </Center>
+    </Container>
   );
 }
-
-
-
-
-
-
-
-
-
+const Container= styled.div`
+.Pass_desc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+ position:relative;
+ top:50px;
+ left:-20px;
+    width: 300px;
+    height: 80px;
+    border-radius: 8px;
+    h1{
+width: 119px;
+height: 20px;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 125%;
+color: #000000;
+    }
+   
+  img{
+padding: 2px;
+width: 28px;
+height: 28px;
+border-radius: 32px;
+position:relative;
+top:35px;
+left:-100px;
+  }
+  h4{
+    position:relative;
+    top:40px;
+    left:-95px;
+width: 73px;
+height: 18px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 125%;
+text-transform: uppercase;
+color: #000000;
+  }
+}
+.Pass_desc:hover {
+  background-color: #aee8ce;
+}
+`

@@ -3,23 +3,28 @@ import {
   Center,
   Stack,
   Button,
- Wrap,
- WrapItem,
 Image,
   useColorModeValue,
   Select,
+
 } from '@chakra-ui/react';
 import NavBar from'../Components/NavBar.jsx';
 import '../App.css';
 import Header from'../Components/Header.jsx'
 import {useState} from 'react';
-
+import styled from 'styled-components';
 
 export default function Home() {
-  
+  const[counterValue , setcounterValue]=useState(5);
 
+  const handleOnChange = (e) =>{
+   setcounterValue(e.target.value)
+  }
+
+  
         
   return (
+    <Container>
     <Center >
        
       <Box className="Card"
@@ -101,26 +106,13 @@ src='images/Circle.png'/>
      </Stack>   
 </Stack>
 <Stack>
+  
  <Box className="number_section">
 <h5> Number of seats</h5>
- <Wrap spacing={4} >
-    <WrapItem>
-      <Button colorScheme='gray'>1</Button>
-    </WrapItem>
-      <WrapItem>
-      <Button colorScheme='gray'>2</Button>
-    </WrapItem>
-      <WrapItem>
-      <Button colorScheme='' bg={'#36AE7C'}
-      >3</Button>
-    </WrapItem>
-      <WrapItem>
-      <Button colorScheme='gray'>4</Button>
-    </WrapItem>
-    <WrapItem>
-      <Button colorScheme='gray'>5</Button>
-    </WrapItem>
-    </Wrap>
+ <input  className="slider" type="range" min='0' max='10' value={counterValue} onChange={handleOnChange}  />
+ <Box className="value">
+{counterValue}
+ </Box>
  </Box>
 </Stack>
 
@@ -157,6 +149,11 @@ top="40px"
         </Stack>
       </Box>
     </Center>
+    </Container>
   );
 }
 
+const Container=styled.div`
+.slider{
+}
+`
