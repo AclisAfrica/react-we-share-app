@@ -109,7 +109,7 @@ src='images/Circle.png'/>
   
  <Box className="number_section">
 <h5> Number of seats</h5>
- <input  className="slider" type="range" min='0' max='10' value={counterValue} onChange={handleOnChange}  />
+ <input  className="slider" type="range" min='0' max='20' value={counterValue} onChange={handleOnChange}  />
  
  </Box>
  <Box className="value">
