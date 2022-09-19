@@ -110,9 +110,10 @@ src='images/Circle.png'/>
  <Box className="number_section">
 <h5> Number of seats</h5>
  <input  className="slider" type="range" min='0' max='10' value={counterValue} onChange={handleOnChange}  />
+ 
+ </Box>
  <Box className="value">
 {counterValue}
- </Box>
  </Box>
 </Stack>
 
@@ -155,6 +156,28 @@ top="40px"
 
 const Container=styled.div`
 .slider{
+width: 80%;
+ -webkit-appearance:none;
+ background-color: #fff;
+ height:10px;
+border:4px solid rgba(196, 196, 196, 0.3);
+  position: relative;
+  top:20px;
+  
+  &::-webkit-slider-thumb{
+ -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height:20px;
+  background-color: #36AE7C;
+  cursor: pointer;
+  border-radius: 50%;
+    
+  }
+}
+.value{
+  position:relative;
+  left:-27px;
 
 }
 `
