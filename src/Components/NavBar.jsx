@@ -12,6 +12,7 @@ Menu,
 } from '@chakra-ui/react';
 import { HamburgerIcon} from '@chakra-ui/icons'
 import '../App.css';
+import {Link} from 'react-router-dom'
 
 export default function Home() {
 
@@ -26,21 +27,35 @@ export default function Home() {
     icon={<HamburgerIcon />}
 position="relative"
 left="-15px"
+
     variant='outline'
   />
-  <MenuList>
-    <MenuItem command='⌘T'>
-      New Tab
+  <MenuList
+  background={'#36AE7C'}>
+     <Link to='/'>
+    <MenuItem >
+      Home
     </MenuItem>
+    </Link>
+    <Link to='/Login'>
+    <MenuItem >
+      Login
+    </MenuItem>
+    </Link>
+    <Link to='/Passengers'>
     <MenuItem  command='⌘N'>
-      New Window
-    </MenuItem>
+      Passengers
+    </MenuItem></Link>
+    <Link to='/Pickups'>
     <MenuItem command='⌘⇧N'>
-      Open Closed Tab
-    </MenuItem>
+     Pickups
+    </MenuItem></Link>
+    <Link to='/DropOff'>
     <MenuItem command='⌘O'>
-      Open File...
+     DropOff
     </MenuItem>
+    </Link>
+    
   </MenuList>
 </Menu>
             <Box className="user_profil " >

@@ -1,17 +1,13 @@
 import {
   Button,
   Center,
-  Image,
   Stack,
   Box,
-  Text,
   useColorModeValue,
  Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  
-
 } from '@chakra-ui/react';
 import styled from 'styled-components';
 import {ChevronDownIcon} from '@chakra-ui/icons'

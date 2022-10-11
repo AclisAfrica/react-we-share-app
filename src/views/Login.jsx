@@ -14,7 +14,7 @@ import { Icon } from 'react-icons-kit';
 import {eye} from 'react-icons-kit/feather/eye';
 import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 import Header from'../Components/Header.jsx';
-
+import{ Link } from'react-router-dom';
 import '../App.css';
 
 
@@ -70,8 +70,8 @@ const handleToggle = () =>{
                    
 
         </Box>
-       
-          <Button
+       <Link to='/'>
+        <Button
             mt={10}
             w={'full'}
             bg={'#36AE7C'}
@@ -90,6 +90,8 @@ textTransform="uppercase"
             >
            Login
           </Button>
+       </Link>
+          
         </Box>
         <Box className="reset_password">
           <a href='#'>Forgot you password?</a>
