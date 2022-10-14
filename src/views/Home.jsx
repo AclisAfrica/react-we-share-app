@@ -13,6 +13,9 @@ import '../App.css';
 import Header from'../Components/Header.jsx'
 import {useState} from 'react';
 import styled from 'styled-components';
+import DatePicker from'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
+
 
 export default function Home() {
   const[counterValue , setcounterValue]=useState(5);
@@ -21,7 +24,7 @@ export default function Home() {
    setcounterValue(e.target.value)
   }
 
-  
+  const[selectedDate, setSelectedDate] = useState(null)
         
   return (
     <Container>
@@ -50,8 +53,8 @@ flexDirection="row"
 alignItems="center" 
 padding="0px"
 width="342px" 
-height="62px" 
-border="4px solid rgba(196, 196, 196, 0.2)" 
+height="52px" 
+border="4px solid #36AE7C " 
 borderRadius="18px"  >
 
   <option value='option1'>Option 1</option>
@@ -67,9 +70,10 @@ flexDirection="row"
 alignItems="center" 
 padding="0px"
 width="342px" 
-height="62px" 
-border="4px solid rgba(196, 196, 196, 0.2)" 
-borderRadius="18px"  >
+height="52px" 
+border="4px solid #36AE7C" 
+borderRadius="15px" 
+ >
 
   <option value='option1'>Option 1</option>
   <option value='option2'>Option 2</option>
@@ -81,14 +85,27 @@ borderRadius="18px"  >
 <Stack direction="row"  gap="60px">
   <Stack direction="row">
         <Box className="date">
-<Image 
+   <Image 
 position="relative"
-top="20px"
-src='images/date.svg'/>
-</Box>
+top="43px"
+left="5px"
+width="15px"
+src='images/date.svg'
+  />
+  </Box>
 <Box className="date_desc">
+  
 <h5>Date</h5>
-<h1>Mon,25 jul</h1>
+<DatePicker
+className="datePicker"
+ selected={selectedDate}
+  onChange={date => setSelectedDate(date)}
+  dateFormat='dd/MM/yyyy '
+  minDate={new Date}
+  showYearDropdown
+  scrollableMonthDropdown
+  />
+  
 </Box>
   </Stack>
 
@@ -101,7 +118,24 @@ src='images/Circle.png'/>
 </Box>
 <Box className="date_desc">
 <h5>Time</h5>
-<h1>7:30 - 8:00 a.m</h1>
+<label for="drop-down"></label>
+<select name="drop-down" id="drop-down">
+  <option value="one">06:00Am-06:30Pm</option>
+  <option value="two">06:30Am-7:00Am</option>
+  <option value="three">7:30Am-08:00Am</option>
+  <option value="two">08:00Am-08:30Am</option>
+  <option value="three">09:00Am-09:30Am</option>
+  <option value="two">09:30Am-10:00Am</option>
+  <option value="three">10:00Am-10:30Am</option>
+  <option value="three">16:30Pm-17:00Pm</option>
+  <option value="three">17:00Pm-17:30Pm</option>
+  <option value="three">17:30Pm-18:00Pm</option>
+   <option value="three">18:00Pm-18:30Pm</option>
+   <option value="three">18:30Pm-19:00Pm</option>
+   <option value="three">19:00Pm-19:30Pm</option>
+   <option value="three">20:30Pm-21:00Pm</option>
+   <option value="three">21:00Pm-21:30Pm</option>
+</select>
 </Box>
      </Stack>   
 </Stack>
@@ -178,6 +212,15 @@ border:4px solid rgba(196, 196, 196, 0.3);
 .value{
   position:relative;
   left:-27px;
+
+}
+.datePicker{
+  margin-top:20px;
+  color:#36AE7C;
+   font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 125%;
 
 }
 `

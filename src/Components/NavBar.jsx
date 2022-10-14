@@ -31,7 +31,8 @@ left="-15px"
     variant='outline'
   />
   <MenuList
-  background={'#36AE7C'}>
+  background={'#36AE7C'}
+  >
      <Link to='/'>
     <MenuItem >
       Home
@@ -43,15 +44,15 @@ left="-15px"
     </MenuItem>
     </Link>
     <Link to='/Passengers'>
-    <MenuItem  command='⌘N'>
+    <MenuItem >
       Passengers
     </MenuItem></Link>
     <Link to='/Pickups'>
-    <MenuItem command='⌘⇧N'>
+    <MenuItem >
      Pickups
     </MenuItem></Link>
     <Link to='/DropOff'>
-    <MenuItem command='⌘O'>
+    <MenuItem >
      DropOff
     </MenuItem>
     </Link>
