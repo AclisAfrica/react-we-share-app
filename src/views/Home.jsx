@@ -15,7 +15,7 @@ import {useState} from 'react';
 import styled from 'styled-components';
 import DatePicker from'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-
+import{ Link } from'react-router-dom';
 
 export default function Home() {
   const[counterValue , setcounterValue]=useState(5);
@@ -163,7 +163,7 @@ src='images/Circle.png'/>
        
 
         <Stack mt={8} direction={'row'} spacing={4}>
-          
+          <Link to='/Passengers'>
           <Button
            
             fontSize={'sm'}
@@ -190,6 +190,8 @@ top="40px"
             }}>
            Submit
           </Button>
+          </Link>
+          
         </Stack>
       </Box>
     </Center>
