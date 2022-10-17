@@ -320,6 +320,7 @@ width: 50px;
 
 .date_desc{
   display: flex;
+ color:#36AE7C;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;

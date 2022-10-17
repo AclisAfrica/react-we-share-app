@@ -85,7 +85,7 @@ borderRadius="15px"
 <Stack direction="row"  gap="60px">
   <Stack direction="row">
        
-<Box className="date_desc">
+<Box className="date_desc  first">
   
 <h5>Date</h5>
 <DatePicker
@@ -94,7 +94,8 @@ className="datePicker"
   onChange={date => setSelectedDate(date)}
   dateFormat='dd/MM/yyyy '
   minDate={new Date}
-  placeholderText={'dd/MM/YYYY' } 
+  placeholderText={'Select  Date' } 
+
   showYearDropdown
   scrollableMonthDropdown
   />
@@ -113,18 +114,12 @@ cursor="pointer"
   </Stack>
 
 <Stack direction="row" >
-       <Box className="date">
-<Image 
-position="relative"
-width="20px"
-top="42px"
-left="10px"
-src='images/Circle.png'/>
-</Box>
+       
 <Box className="date_desc">
 <h5>Time</h5>
 <label for="drop-down"></label>
 <select name="drop-down" id="drop-down" className="drop-down">
+   <option value="one">Select the time</option>
   <option value="one">06:00-06:30Am</option>
   <option value="two">06:30-7:00Am</option>
   <option value="three">7:30-08:00Am</option>
@@ -141,6 +136,15 @@ src='images/Circle.png'/>
    <option value="three">20:30-21:00Pm</option>
    <option value="three">21:00-21:30Pm</option>
 </select>
+<Box className="date">
+<Image 
+position="relative"
+width="21px"
+top="-21px"
+left="135px"
+cursor="pointer"
+src='images/Circle.png'/>
+</Box>
 </Box>
      </Stack>   
 </Stack>
@@ -229,7 +233,7 @@ border:4px solid rgba(196, 196, 196, 0.3);
 }
 .drop-down{
   margin-top:20px;
-  color:#36AE7C;
+cursor:pointer;
   width:135px;
    font-style: normal;
     font-weight: 600;
@@ -239,10 +243,11 @@ border:4px solid rgba(196, 196, 196, 0.3);
 .datePicker{
   cursor:pointer;
   width:110px;
-  
+border:1px solid ;
+border-radius:2px;
+}
+.first{
+  margin-left:-60px;
+}
 
-}
-datePicker>:placeholderText{
-  
-}
 `

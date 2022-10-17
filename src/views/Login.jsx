@@ -53,7 +53,7 @@ const handleToggle = () =>{
         <Box className="body" px={6} py={10} mb="15px">
          <Box className="input">
               <h1>Username</h1>
-               <Input  placeholder="gmarlery@gmail.com" />
+               <Input  placeholder="example@example.com" />
 
                 <h1>password</h1>
                 
