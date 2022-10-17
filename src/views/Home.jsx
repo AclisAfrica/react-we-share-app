@@ -119,22 +119,22 @@ src='images/Circle.png'/>
 <Box className="date_desc">
 <h5>Time</h5>
 <label for="drop-down"></label>
-<select name="drop-down" id="drop-down">
-  <option value="one">06:00Am-06:30Pm</option>
-  <option value="two">06:30Am-7:00Am</option>
-  <option value="three">7:30Am-08:00Am</option>
-  <option value="two">08:00Am-08:30Am</option>
-  <option value="three">09:00Am-09:30Am</option>
-  <option value="two">09:30Am-10:00Am</option>
-  <option value="three">10:00Am-10:30Am</option>
-  <option value="three">16:30Pm-17:00Pm</option>
-  <option value="three">17:00Pm-17:30Pm</option>
-  <option value="three">17:30Pm-18:00Pm</option>
-   <option value="three">18:00Pm-18:30Pm</option>
-   <option value="three">18:30Pm-19:00Pm</option>
-   <option value="three">19:00Pm-19:30Pm</option>
-   <option value="three">20:30Pm-21:00Pm</option>
-   <option value="three">21:00Pm-21:30Pm</option>
+<select name="drop-down" id="drop-down" className="drop-down">
+  <option value="one">06:00-06:30Am</option>
+  <option value="two">06:30-7:00Am</option>
+  <option value="three">7:30-08:00Am</option>
+  <option value="two">08:00-08:30Am</option>
+  <option value="three">09:00-09:30Am</option>
+  <option value="two">09:30-10:00Am</option>
+  <option value="three">10:00-10:30Am</option>
+  <option value="three">16:30-17:00Pm</option>
+  <option value="three">17:00-17:30Pm</option>
+  <option value="three">17:30-18:00Pm</option>
+   <option value="three">18:00-18:30Pm</option>
+   <option value="three">18:30-19:00Pm</option>
+   <option value="three">19:00-19:30Pm</option>
+   <option value="three">20:30-21:00Pm</option>
+   <option value="three">21:00-21:30Pm</option>
 </select>
 </Box>
      </Stack>   
@@ -221,6 +221,15 @@ border:4px solid rgba(196, 196, 196, 0.3);
     font-weight: 600;
     font-size: 14px;
     line-height: 125%;
-
 }
+.drop-down{
+  margin-top:20px;
+  color:#36AE7C;
+  width:135px;
+   font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 125%;
+}
+
 `
