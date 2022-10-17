@@ -82,7 +82,7 @@ borderRadius="15px"
 </Box>
 </Stack>
 
-<Stack direction="row"  gap="60px">
+<Stack direction="row"  gap="90px">
   <Stack direction="row">
        
 <Box className="date_desc  first">
@@ -136,7 +136,7 @@ cursor="pointer"
    <option value="three">20:30-21:00Pm</option>
    <option value="three">21:00-21:30Pm</option>
 </select>
-<Box className="date">
+{/* <Box className="date">
 <Image 
 position="relative"
 width="21px"
@@ -144,7 +144,7 @@ top="-21px"
 left="135px"
 cursor="pointer"
 src='images/Circle.png'/>
-</Box>
+</Box> */}
 </Box>
      </Stack>   
 </Stack>
@@ -249,7 +249,7 @@ border:1px solid ;
 border-radius:2px;
 }
 .first{
-  margin-left:-60px;
+  margin-left:-20px;
 }
 
 `
