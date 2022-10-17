@@ -75,7 +75,7 @@ border="4px solid #36AE7C"
 borderRadius="15px" 
  >
 
-  <option value='option1'>Option 1</option>
+  <option value='option1' >Option 1</option>
   <option value='option2'>Option 2</option>
   <option value='option3'>Option 3</option>
 </Select>
@@ -84,15 +84,7 @@ borderRadius="15px"
 
 <Stack direction="row"  gap="60px">
   <Stack direction="row">
-        <Box className="date">
-   <Image 
-position="relative"
-top="43px"
-left="5px"
-width="15px"
-src='images/date.svg'
-  />
-  </Box>
+       
 <Box className="date_desc">
   
 <h5>Date</h5>
@@ -102,10 +94,21 @@ className="datePicker"
   onChange={date => setSelectedDate(date)}
   dateFormat='dd/MM/yyyy '
   minDate={new Date}
+  placeholderText={'dd/MM/YYYY' } 
   showYearDropdown
   scrollableMonthDropdown
   />
-  
+   <Box className="date">
+   <Image 
+position="relative"
+top="-20px"
+left="90px"
+width="15px"
+src='images/date.svg'
+z-index="1"
+cursor="pointer"
+  />
+  </Box>
 </Box>
   </Stack>
 
@@ -113,7 +116,9 @@ className="datePicker"
        <Box className="date">
 <Image 
 position="relative"
-top="20px"
+width="20px"
+top="42px"
+left="10px"
 src='images/Circle.png'/>
 </Box>
 <Box className="date_desc">
@@ -231,5 +236,13 @@ border:4px solid rgba(196, 196, 196, 0.3);
     font-size: 14px;
     line-height: 125%;
 }
+.datePicker{
+  cursor:pointer;
+  width:110px;
+  
 
+}
+datePicker>:placeholderText{
+  
+}
 `
